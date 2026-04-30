@@ -1,0 +1,15 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zmkfirmware/zmk-build-action@v2
+        with:
+          firmware: |
+            nice_nano_v2/sofle_left
+            nice_nano_v2/sofle_right
